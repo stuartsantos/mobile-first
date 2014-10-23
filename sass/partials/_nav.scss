@@ -1,0 +1,134 @@
+
+.utiNavSec{
+  text-align: center;
+  margin-top: .5em;
+  @include breakpoint($tablet, $no-query: true) {
+    text-align: left;
+  }
+  li {
+    margin-left: 0;
+    display: inline;
+    &:first-child:after {
+      content: "●";
+      color: $light-aig-blue;
+      font-size: 13px;
+    }
+    &:first-child a {
+      color: $darker-aig-blue;
+    }
+    a {
+      color: $light-aig-blue;
+      display: inline-block;
+      font-family: $futura-bold;
+      margin: 15px 10px;
+      text-transform: uppercase;
+      font-size: .8125em;
+      &:hover {
+        text-decoration: none;
+        color: $darker-aig-blue;
+      }
+    }
+  }
+}
+
+#topMenu {
+  right: 100%;
+  width: 200px;
+  @include breakpoint($tablet, $no-query: true) {
+    right: auto;
+    width: 100%;
+  }
+}
+
+#navContainer {
+  overflow: hidden;
+  position: absolute;
+  width: 200px;
+  top: 140px;
+  display: none;
+  @include breakpoint($tablet, $no-query: true) {
+    position: static;
+    width: 100%;
+    top: auto;
+    display: block;
+    background: $aig-blue;
+  }
+}
+
+#navListPanel {
+  height: 100%;
+  padding-left: 0;
+  background: #b0b0b0;
+  line-height: 1.5;
+  @include breakpoint($tablet, $no-query: true) {
+    height: auto;
+    background: $aig-blue;
+    line-height: 1;
+  }
+  li {
+    width: 200px;
+    @include breakpoint($tablet, $no-query: true) {
+        width: auto;
+        float: left;
+        &:first-child a {
+            padding-left: 20px;
+        }
+        li {
+          float: none;
+        }
+    }
+    a {
+      padding: 11px;
+      font-family: $futura-med;
+      color: #fff;
+      display: block;
+      @include breakpoint($tablet, $no-query: true) {
+        padding: 24.5px 10px;
+        @include breakpoint($super-tablet, $no-query: true) {
+          font-size: 1.125em;
+        }
+      }
+      &:hover {
+        color: #FCD97E;
+        transition: all .25s;
+        text-decoration: none;
+        @include breakpoint($tablet, $no-query: true) {
+          background: $light-aig-blue;
+        }
+      }
+    }
+    &.tabOnActive a.navLink, & a.nonLink {
+      color: #FCD97E;
+      @include breakpoint($tablet, $no-query: true) {
+        background: $light-aig-blue;
+      }
+    }
+    &:hover ul {
+        @include breakpoint($tablet, $no-query: true) {
+          display: block;
+          position: absolute;
+          background: rgba($light-aig-blue, .9);
+          @include filter(50c8e8);
+          transition: all .25s;
+          z-index: 2;
+          li {
+            display: block;
+          }
+          a {
+            padding: 10px;
+          }
+        }
+    }
+    #subNav3 {
+      @include breakpoint($tablet, $no-query: true) {
+        display: block !important;
+      }
+    }
+    ul {
+      display: none;
+    }
+    #navBox3 {
+      display: none !important;
+    }
+  }
+}

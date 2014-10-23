@@ -1,0 +1,21 @@
+/***************Poland******************/
+
+  /***************Homepage******************/
+  .hasBanner {
+    .bnrDesc {
+      @include breakpoint(401px 565px) {
+        font-size: 1.25em;
+      }
+    }
+    .moduleTitle, .rightNonBulleted .moduleTitle {
+      @include breakpoint($sub-desktop) {
+        font-size: 1.2em;
+      }
+    }
+  } 
+  
+  /***************Homepage******************/
+
+
+
+/***************End Poland******************/

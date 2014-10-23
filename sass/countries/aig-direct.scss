@@ -1,0 +1,13 @@
+//utils
+@import 'breakpoint';
+@import "compass/utilities/general/clearfix";
+
+//variables
+@import 'partials/_variables.scss';
+
+header {
+	padding-bottom: 1.5em !important;
+}
+#logo img {
+	max-width: 175px !important;
+}

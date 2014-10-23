@@ -1,0 +1,190 @@
+/*****************Homepage*******************/
+
+.hasBanner {
+  #popContent, .btnlft, .btnrgt, .carBackBtn, .bnrTitle {
+    display: none;
+  }
+
+  #gridTop {
+    padding-right: 0;
+    background: none;
+    @include breakpoint($super-tablet, $no-query: true) {
+      padding-right: 65px;
+      background: $aig-blue;
+    }
+  }
+
+  #gridLeft, #gridCenter, #gridRight {
+    text-align: center;
+    @include breakpoint($sub-desktop, $no-query: true) {
+      margin-top: 0;
+      text-align: left;
+      width: 30%;
+    }
+  }
+
+  #gridRight {
+    @include breakpoint($super-tablet, $no-query: true) {
+      float: none;
+      width: 100%;
+      margin: 0;
+    }
+    @include breakpoint($sub-desktop, $no-query: true) {
+      float: right;
+      width: 30%;
+    }
+  }
+
+  #gridLeft {
+    @include breakpoint($sub-desktop, $no-query: true) {
+      float: left;
+      margin-right: 5%;
+    }
+  }
+
+  #navBanner {
+    position: relative;
+    margin-bottom: 1em;
+    @include breakpoint($tablet, $no-query: true) {
+      padding-right: 65px;
+      background: $aig-blue;
+    }
+    @include breakpoint($super-tablet, $no-query: true) {
+      float: left;
+      padding-right: 0;
+      width: 55%;
+      height: 442px;
+      margin-bottom: 0;
+    }
+    @include breakpoint($desktop, $no-query: true) {
+      width: auto;
+    }
+  }
+
+  .bannerSection {
+    position: relative;
+    img {
+      max-width: 100%;
+      @include breakpoint($super-tablet, $no-query: true) {
+        max-width: none;
+      }
+    }
+  }
+
+  .thumblist {
+    text-align: center;
+    margin-top: 7px;
+    li {
+      display: inline-block;
+      margin: 0 .5em;
+    }
+    a {
+      height: 15px;
+      width: 15px;
+      display: block;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      &:hover {
+        background: #fff;
+      }
+    }
+    .on a {
+      background: #fff;
+    }
+    span {
+      display: none;
+    }
+  }
+
+  #thumbnail {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(76,76,76,.8);
+    @include filter(4c4c4c);
+  }
+
+  .centerModule ul.nonBulleted {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .moduleTitle {
+    font-size: 1.5em;
+    text-align: center;
+    color: $dark-aig-blue;
+  }
+  #grid_wrapper img {
+    display: block;
+    margin: auto;
+    @include breakpoint($sub-desktop, $no-query: true) {
+      max-width: 100%;
+      height: auto !important;
+    }
+    &:hover {
+      box-shadow: 0 0 5px #7a7a7a;
+      transition: all .25s;
+    }
+  }
+  #grid_wrapper {
+    @include breakpoint($super-tablet, $no-query: true) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    @include breakpoint($sub-desktop, $no-query: true) {
+      display: block;
+      margin-top: 1em;
+    }
+  }
+  .bnrDesc {
+    position: absolute;
+    font-size: 1.5em;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 1em 1em 1.5em 1em;
+    padding: 1em;
+    font-size: 1.1em;
+    @include filter(ffffff);
+    background: rgba(255, 255, 255, 0.8);
+    color: $dark-aig-blue;
+    @include breakpoint($sub-tablet, $no-query: true) {
+      bottom: auto;
+      font-size: 1.5em;
+    }
+    @include breakpoint($tablet, $no-query: true) {
+      margin: 2em;
+    }
+    @include breakpoint($desktop, $no-query: true) {
+      max-width: 50%;
+      max-height: 71%;
+    }
+    h2 {
+      font-size: 1.5em;
+      font-family: $futura-med;
+    }
+  }
+  #formContainer {
+    @include breakpoint($super-tablet, $no-query: true) {
+      float: left;
+      width: 44%;
+      z-index: 1;
+      position: relative;
+      height: 442px;
+      border-radius: 0;
+      margin-bottom: 0 !important;
+    }
+    @include breakpoint($desktop, $no-query: true) {
+      width: 271px;
+    }
+  }
+}
+
+/*****************End Homepage*******************/

@@ -1,0 +1,302 @@
+/***************Product Page***************/
+
+#gridTop {
+  @include breakpoint($super-tablet, $no-query: true) {
+    padding-right: 65px;
+    background: $aig-blue;
+  }
+}
+
+#pageBanner {
+  text-align: center;
+  font-size: 2em;
+  background: $light-aig-blue;
+  color: #fff;
+  @include breakpoint($tablet, $no-query: true) {
+    text-align: left;
+    @include clearfix;
+  }
+  img {
+    width: 100%;
+    display: block;
+    @include breakpoint($sub-tablet, $no-query: true) {
+        display: none;
+    }
+    @include breakpoint($tablet, $no-query: true) {
+        display: block;
+        width: auto;
+        float: right;
+    }
+  }
+  h1 {
+    padding: .5em;
+    @include breakpoint($tablet, $no-query: true) {
+        padding: .75em;
+        display: inline-block;
+        height: 128px;
+        max-width: 40%;
+        float: left;
+    }
+    @include breakpoint($sub-desktop, $no-query: true) {
+      max-width: 55%;
+    }
+  }
+}
+
+#gridDetailNav {
+  @include breakpoint($super-tablet, $no-query: true) {
+    margin-top: 1px;
+  }
+}
+
+.catNav li {
+  display: none;
+  @include breakpoint($super-tablet, $no-query: true) {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    @include button-gradient;
+    background-color: $light-aig-blue;
+    float: left;
+    padding: 3px 15px;
+    margin-right: 1px;
+    font-family: $futura-bold;
+    font-size: .85em;
+    &:hover {
+      background-color: $aig-blue;
+      transition: all .25s;
+    }
+    &.active {
+      background-color: $aig-blue;
+    }
+    a {
+      color: #fff;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.catNav select {
+  width: 100%;
+  margin-top: 15px;
+  font-size: 1em;
+  @include breakpoint($super-tablet, $no-query: true) {
+    display: none;
+  }
+}
+
+.centerModule {
+  line-height: 1.5;
+  table.customClass {
+    td {
+      display: inline;
+      @include breakpoint($sub-desktop, $no-query: true) {
+        display: table-cell;
+        vertical-align: top;
+      }
+    }
+    img {
+      display: block;
+      margin: 2em auto 0;
+      @include breakpoint($sub-desktop, $no-query: true) {
+        margin-top: 0;
+      }
+    }
+    h2 {
+      text-align: center;
+      font-family: $futura-med;
+      @include breakpoint($sub-desktop, $no-query: true) {
+        text-align: left;
+      }
+    }
+  }
+  a img:hover {
+    box-shadow: 0 0 5px #7a7a7a;
+    transition: all .25s;
+  }
+  ol, ul {
+    margin: 10px 0;
+    padding-left: 30px;
+    list-style: decimal outside none;
+  }
+  ul {
+    list-style: disc outside none;
+  }
+}
+
+#pageTitle {
+  color: $dark-aig-blue;
+  font-size: 1.5em;
+  margin: .5em 0;
+  line-height: 1;
+}
+
+.detailAccModule { 
+  h4 {
+    color: #645c5c;
+  }
+  ul {
+    background: #F3F3F4;
+    margin-bottom: .35em;
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+  }
+  .active {
+    .detModTitle {
+    color: #fff;
+    background: #50c8e8 url('/Chartis/internet/US/en/pier_acc_down_tcm3171-555196.gif') no-repeat 96.5% 20px;
+    }
+    .detModDesc ul, .detModDesc ol {
+      list-style: disc outside none;
+      padding: 10px 0 0 25px;
+      li {
+        padding-bottom: 10px;
+      }
+      ul {
+        list-style: circle outside none;
+      }
+    }
+    .detModDesc ol {
+      list-style: decimal outside none;
+    }
+  }
+  .detModTitle {
+    padding: 10px 50px 20px 10px;
+    font-family: $futura-med;
+    color: $aig-blue;
+    background: #e5e5e5;
+    cursor: pointer;
+  }
+  .detModDesc {
+    padding: 10px;
+  }
+  .deActive .detModTitle {
+    background: #e5e5e5 url('/Chartis/internet/US/en/pier_acc_up_tcm3171-555195.gif') no-repeat 96.5% 20px;
+  }
+}
+
+table.customClass1 { 
+  margin-bottom: 0;
+  td, th {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    @include breakpoint($desktop, $no-query: true) {
+      position: static;
+      white-space: normal;
+      overflow: auto;
+    }
+    &:first-child, table.customClass1.pinned td {
+      display: none;
+      @include breakpoint($desktop, $no-query: true) {
+        display: table-cell;
+      }
+    }
+  }
+}
+  
+.pinned { 
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  background: #fff; 
+  width: 35%; 
+  overflow: hidden; 
+  overflow-x: scroll; 
+  border-right: 1px solid #ccc; 
+  border-left: 1px solid #ccc;
+  @include breakpoint($desktop, $no-query: true) {
+    position: static;
+    left: auto;
+    top: auto;
+    background: none;
+    width: auto;
+    overflow: auto;
+    overflow-x: auto;
+  }
+  table {
+    border-right: none; 
+    border-left: none; 
+    width: 100%;
+    @include breakpoint($desktop, $no-query: true) {
+      border-right: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+    }
+    th, td {
+      white-space: nowrap;
+      text-align: left;
+      width: 100%;
+      @include breakpoint($desktop, $no-query: true) {
+        white-space: normal;
+      }
+    }
+    td:last-child {
+      border-bottom: 0;
+      @include breakpoint($desktop, $no-query: true) {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  } 
+}
+div.table-wrapper { 
+  position: relative; 
+  margin-bottom: 20px; 
+  overflow: hidden; 
+  border-right: 1px solid #ccc;
+  @include breakpoint($desktop, $no-query: true) {
+    position: static;
+    margin-bottom: 0;
+    overflow: auto;
+  }
+  div.scrollable {
+    margin-left: 35%;
+    overflow: scroll;
+    overflow-y: hidden;
+    @include breakpoint($desktop, $no-query: true) {
+      margin-left: 0;
+      overflow: auto;
+      overflow-y: auto;
+    }
+  }
+}
+
+table, th, td, td.Custom_Bold {
+  padding: 5px 10px;
+}
+td.Custom_Bold {
+  font-family: $futura-med;
+}
+tr.odd td {
+  background: #f2f3f3;
+  border: 1px solid #b0b0b0;
+}
+tr.even td, tr.even th, tr.odd th {
+  border: 1px solid #b0b0b0;
+}
+tr.odd td.Custom_Bold, td.Custom_Bold {
+  background: #D9F5F9;
+}
+th {
+  font-family: $futura-med;
+  font-size: inherit;
+  background: $light-aig-blue;
+  color: #fff;
+}
+
+ul.bigBulleted li a.Custom_Bold {
+  width: 100%;
+  text-align: center;
+}
+
+.rightNonBulleted {
+  margin-bottom: 1em;
+  .moduleTitle {
+    font-size: 1.5em;
+    color: $dark-aig-blue;
+  }
+}
+
+/***************End Product Page***************/
