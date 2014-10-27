@@ -1,7 +1,38 @@
 /***************Poland******************/
+  
+  /***************Global******************/
+
+  #formContainer {
+    height: auto !important;
+    .inp {
+      padding: 5px !important;
+      font-size: 13px !important;
+    }
+    .frmBlock {
+      margin-bottom: 1em !important;
+    }
+  } 
+
+  /***************End Global******************/
 
   /***************Homepage******************/
+
   .hasBanner {
+    #formContainer {
+      @include breakpoint($super-tablet, $no-query: true) {
+      height: 442px !important;
+      .inp {
+        @include breakpoint($super-tablet, $no-query: true) {
+          padding: 2px !important;
+        }
+      }
+      .frmBlock {
+        @include breakpoint($super-tablet, $no-query: true) {
+          margin-bottom: .75em !important;
+        }
+      }
+    }
+    }
     .bnrDesc {
       @include breakpoint(401px 565px) {
         font-size: 1.25em;
@@ -12,10 +43,9 @@
         font-size: 1.2em;
       }
     }
-  } 
+  }
   
-  /***************Homepage******************/
-
+  /***************End Homepage******************/
 
 
 /***************End Poland******************/

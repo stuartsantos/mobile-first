@@ -299,4 +299,27 @@ ul.bigBulleted li a.Custom_Bold {
   }
 }
 
+.relatedDownload {
+  margin-bottom: 1em;
+  .moduleTitle {
+    font-size: 1.5em;
+    color: $dark-aig-blue;
+  }
+  .pdf {
+    content: inline-image('pdf.png');
+    display: block;
+    float: left;
+    width: 30px;
+  }
+  li {
+    @include clearfix;
+    margin-bottom: .5em;
+  }
+  a {
+    margin-left: 2.5em;
+    display: block;
+    font-family: $futura-med;
+  }
+}
+
 /***************End Product Page***************/

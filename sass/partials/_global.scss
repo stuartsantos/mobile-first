@@ -391,7 +391,7 @@ select, optgroup, option, input, textarea {
   background: #ddd;
   padding: 1em;
   .copyrightTxt {
-    margin-bottom: 1em;
+    display: none;
   }
   .offerLink {
     display: none;
@@ -410,8 +410,8 @@ select, optgroup, option, input, textarea {
 
 #footerSecDetails .thumblist {
   text-align: left;
-  margin-top: 1em;
-  @include breakpoint($tablet) {
+  margin-top: 0;
+  @include breakpoint($tablet, $no-query: true) {
     @include clearfix;
   }
   a {
@@ -424,19 +424,19 @@ select, optgroup, option, input, textarea {
     }
   }
   .carModuleTitle {
-    font-family: $futura-med;
+    display: none;
   }
   .carModule {
     li:first-child {
-      display: none;
+      font-family: $futura-med;
     }
     li {
       display: block;
       margin: .5em 0;
-      @include breakpoint($tablet) {
+      @include breakpoint($tablet, $no-query: true) {
         float: none;
       }
-      @include breakpoint($sub-desktop) {
+      @include breakpoint($sub-desktop, $no-query: true) {
         max-width: 100%;
       }
     }
@@ -444,19 +444,32 @@ select, optgroup, option, input, textarea {
   li {
     margin: 0 1em 1em 0;
     display: block;
-    @include breakpoint($tablet) {
+    @include breakpoint($tablet, $no-query: true) {
       float: left;
       display: inline;
       width: 50%;
       margin-right: 0;
     }
-    @include breakpoint($sub-desktop) {
+    @include breakpoint($sub-desktop, $no-query: true) {
       width: auto;
       margin-right: 2em;
-      max-width: 20%;
+      max-width: 15%;
       &:last-child {
         margin-right: 0;
       }
+    }
+  }
+}
+
+#siteFooter {
+  display: block !important;
+  background: #ddd;
+  padding: 0 1em 1em;
+  a:link, a:visited, a:active {
+    color: #645C5C;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
     }
   }
 }
