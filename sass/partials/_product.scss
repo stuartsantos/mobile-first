@@ -306,10 +306,12 @@ ul.bigBulleted li a.Custom_Bold {
     color: $dark-aig-blue;
   }
   .pdf {
-    content: inline-image('pdf.png');
+    background: inline-image('pdf.png');
     display: block;
     float: left;
     width: 30px;
+    height: 30px;
+    background-size: 30px;
   }
   li {
     @include clearfix;

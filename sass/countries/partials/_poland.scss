@@ -41,6 +41,7 @@
     .moduleTitle, .rightNonBulleted .moduleTitle {
       @include breakpoint($sub-desktop) {
         font-size: 1.2em;
+        font-family: $futura-med;
       }
     }
   }
