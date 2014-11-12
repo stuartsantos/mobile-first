@@ -1,0 +1,115 @@
+/***************UAE******************/
+
+	/***************Global******************/
+	.tabcontainer {
+		border: 1px solid $light-aig-blue;
+		border-radius: 6px;
+		padding: 1em;
+		margin-bottom: 1em;
+		.title {
+			font-size: 1.5em;
+			text-align: center;
+			margin-bottom: .5em;
+			color: $yellow;
+			font-family: $futura-med;
+		}
+		li {
+			margin-bottom: 1em;
+		}
+		label {
+			display: block;
+			margin-bottom: .25em;
+			color: $aig-blue;
+		}
+		.error {
+			display: none;
+			color: tomato;
+		}
+		.button {
+			border: medium none;
+			cursor: pointer;
+			background: -moz-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.2)), color-stop(100%,rgba(0,0,0,0.2))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.2) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.2) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.2) 100%); /* IE10+ */
+			background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.2) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffffff', endColorstr='#33000000',GradientType=0 ); /* IE6-9 */
+			background-color: #E36F1E;
+			color: #FFFFFF !important;
+			display: block;
+			font-size: 15px;
+			padding: 8px 20px;
+			text-decoration: none;
+			font-family: 'aig_futurabold', Helvetica, Arial, sans-serif;/*Global Font*/
+			border-radius:6px;
+			text-transform: uppercase;
+			text-align:center;
+			margin: auto;
+			width: auto;
+			&:hover {
+				background-color: #c85c11;
+				transition: background-color 0.25s ease 0s;
+				-webkit-transition: background-color 0.25s ease 0s;
+				padding:7px 19px;
+				border:1px solid #e36f1e;
+			}
+			&:active {
+				background-color: #b44a01;
+				border:1px solid #983e00;
+			}
+		}
+		.retriveQuote {
+			text-align: center;
+		}
+	}
+	.tabnav {
+		text-align: center;
+		li {
+			display: inline-block;
+		}
+		a {
+			padding: .5em;
+			border: 1px solid $light-aig-blue;
+			display: block;
+			&.activeTab {
+				background: $aig-blue;
+				color: #fff;
+				&:hover {
+					background: $aig-blue;
+				}
+			}
+			&:hover {
+				text-decoration: none;
+				background: $light-aig-blue;
+				color: #fff;
+			}
+		}
+	}
+	select, input {
+		font-size: 1em;
+		width: 100%;
+		border: 1px solid #ccc;
+		padding: 5px;
+	}
+	.areaCode, .phoneNo, #homeAreaCode, #homemobileNo {
+		display: inline;
+	}
+	.areaCode, #homeAreaCode {
+		width: 50px;
+	}
+	.phoneNo, #homemobileNo {
+		width: 75px;
+	}
+	/***************End Global******************/
+
+	/***************Homepage******************/
+
+	.hasBanner {
+		
+	}
+
+
+	/***************End Homepage******************/
+
+/***************End UAE******************/
