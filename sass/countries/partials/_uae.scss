@@ -28,13 +28,7 @@
 		.button {
 			border: medium none;
 			cursor: pointer;
-			background: -moz-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.2)), color-stop(100%,rgba(0,0,0,0.2))); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.2) 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.2) 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(top, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.2) 100%); /* IE10+ */
-			background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.2) 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffffff', endColorstr='#33000000',GradientType=0 ); /* IE6-9 */
+			@include button-gradient;
 			background-color: #E36F1E;
 			color: #FFFFFF !important;
 			display: block;
@@ -91,6 +85,7 @@
 		width: 100%;
 		border: 1px solid #ccc;
 		padding: 5px;
+		color: #666;
 	}
 	.areaCode, .phoneNo, #homeAreaCode, #homemobileNo {
 		display: inline;
@@ -101,6 +96,27 @@
 	.phoneNo, #homemobileNo {
 		width: 75px;
 	}
+	#getQuoteDiabled {
+		display: none;
+	}
+
+	input[type=radio] {
+		display: inline;
+		width: auto;
+		margin-bottom: 1em;
+	}
+
+	.calDynWidget {
+		table {
+			background: #fff;
+			border: 1px solid $aig-blue;
+			table {
+				border: none;
+			}
+		}
+	}
+
+
 	/***************End Global******************/
 
 	/***************Homepage******************/

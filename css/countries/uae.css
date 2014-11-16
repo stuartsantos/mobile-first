@@ -1679,8 +1679,6 @@ ul.bigBulleted li a.Custom_Bold {
   /* IE10+ */
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffffff', endColorstr='#33000000',GradientType=0 );
-  /* IE6-9 */
   background-color: #E36F1E;
   color: #FFFFFF !important;
   display: block;
@@ -1695,7 +1693,7 @@ ul.bigBulleted li a.Custom_Bold {
   margin: auto;
   width: auto;
 }
-/* line 50, ../../sass/countries/partials/_uae.scss */
+/* line 44, ../../sass/countries/partials/_uae.scss */
 .tabcontainer .button:hover {
   background-color: #c85c11;
   transition: background-color 0.25s ease 0s;
@@ -1703,67 +1701,90 @@ ul.bigBulleted li a.Custom_Bold {
   padding: 7px 19px;
   border: 1px solid #e36f1e;
 }
-/* line 57, ../../sass/countries/partials/_uae.scss */
+/* line 51, ../../sass/countries/partials/_uae.scss */
 .tabcontainer .button:active {
   background-color: #b44a01;
   border: 1px solid #983e00;
 }
-/* line 62, ../../sass/countries/partials/_uae.scss */
+/* line 56, ../../sass/countries/partials/_uae.scss */
 .tabcontainer .retriveQuote {
   text-align: center;
 }
 
-/* line 66, ../../sass/countries/partials/_uae.scss */
+/* line 60, ../../sass/countries/partials/_uae.scss */
 .tabnav {
   text-align: center;
 }
-/* line 68, ../../sass/countries/partials/_uae.scss */
+/* line 62, ../../sass/countries/partials/_uae.scss */
 .tabnav li {
   display: inline-block;
 }
-/* line 71, ../../sass/countries/partials/_uae.scss */
+/* line 65, ../../sass/countries/partials/_uae.scss */
 .tabnav a {
   padding: .5em;
   border: 1px solid #50c8e8;
   display: block;
 }
-/* line 75, ../../sass/countries/partials/_uae.scss */
+/* line 69, ../../sass/countries/partials/_uae.scss */
 .tabnav a.activeTab {
   background: #00a4e4;
   color: #fff;
 }
-/* line 78, ../../sass/countries/partials/_uae.scss */
+/* line 72, ../../sass/countries/partials/_uae.scss */
 .tabnav a.activeTab:hover {
   background: #00a4e4;
 }
-/* line 82, ../../sass/countries/partials/_uae.scss */
+/* line 76, ../../sass/countries/partials/_uae.scss */
 .tabnav a:hover {
   text-decoration: none;
   background: #50c8e8;
   color: #fff;
 }
 
-/* line 89, ../../sass/countries/partials/_uae.scss */
+/* line 83, ../../sass/countries/partials/_uae.scss */
 select, input {
   font-size: 1em;
   width: 100%;
   border: 1px solid #ccc;
   padding: 5px;
+  color: #666;
 }
 
-/* line 95, ../../sass/countries/partials/_uae.scss */
+/* line 90, ../../sass/countries/partials/_uae.scss */
 .areaCode, .phoneNo, #homeAreaCode, #homemobileNo {
   display: inline;
 }
 
-/* line 98, ../../sass/countries/partials/_uae.scss */
+/* line 93, ../../sass/countries/partials/_uae.scss */
 .areaCode, #homeAreaCode {
   width: 50px;
 }
 
-/* line 101, ../../sass/countries/partials/_uae.scss */
+/* line 96, ../../sass/countries/partials/_uae.scss */
 .phoneNo, #homemobileNo {
   width: 75px;
+}
+
+/* line 99, ../../sass/countries/partials/_uae.scss */
+#getQuoteDiabled {
+  display: none;
+}
+
+/* line 103, ../../sass/countries/partials/_uae.scss */
+input[type=radio] {
+  display: inline;
+  width: auto;
+  margin-bottom: 1em;
+}
+
+/* line 110, ../../sass/countries/partials/_uae.scss */
+.calDynWidget table {
+  background: #fff;
+  border: 1px solid #00a4e4;
+}
+/* line 113, ../../sass/countries/partials/_uae.scss */
+.calDynWidget table table {
+  border: none;
 }
 
 /***************End Global******************/
