@@ -2,14 +2,11 @@
 @import 'breakpoint';
 @import "compass/utilities/general/clearfix";
 
+//remove media queries
+$breakpoint-no-queries: true;
+
 //variables
 @import 'partials/_variables.scss';
-
-//reset
-@import 'partials/_reset.scss';
-
-//fonts
-@import 'partials/_fonts.scss';
 
 //page partials
 @import 'partials/_global.scss';
@@ -19,4 +16,7 @@
 @import 'partials/_news.scss';
 
 //country
-@import 'countries/partials/_poland.scss';
+@import 'countries/partials/_italy.scss';
+
+//ie fixes
+@import 'partials/_ie-fix.scss';

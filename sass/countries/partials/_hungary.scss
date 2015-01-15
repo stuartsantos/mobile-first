@@ -1,0 +1,24 @@
+/***************Hungary******************/
+
+header {
+  padding-bottom: 1.5em;
+}
+
+#logo img {
+  max-width: 175px;
+}
+
+.hasBanner {
+	.centerModule, .leftModule, .rightModule, .nonBulleted {
+    height: auto !important;
+    margin-bottom: 1em;
+  }
+  .bnrDesc {
+    font-size: 1em;
+    @include breakpoint(450px, $no-query: true) {
+      font-size: 1.25em;
+    }
+  }
+}
+
+/***************End Hungary******************/

@@ -5,5 +5,14 @@ header {
 #logo img {
 	max-width: 175px !important;
 }
+.hasBanner .bnrDesc h2 {
+	@include breakpoint($super-tablet $sub-desktop, $no-query: true) {
+		font-size: 1.2em;
+	}
+	@include breakpoint($sub-tablet 450px, $no-query: true) {
+		font-size: 1.2em;
+	}
+}
+
 
 /***************End Finland******************/

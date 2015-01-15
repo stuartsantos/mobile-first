@@ -27,19 +27,10 @@ module.exports = function(grunt) {
         }
       }
     },
-    criticalcss: {
-        custom_options: {
-            options: {
-                url: "https://www.aig.pl",
-                width: 1200,
-                height: 900,
-                outputfile: "css/critical.css",
-                filename: "css/countries/poland.css",
-                buffer: 800*1024
-            }
-        }
-    },
     watch: {
+      options: {
+        livereload: true,
+      },
       js: {
         files: ['js/*.js'],
         tasks: ['uglify']
@@ -51,15 +42,13 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-criticalcss');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
 
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify', 'compass']);
+  grunt.registerTask('default', ['uglify', 'compass', 'qunit']);
 
 };

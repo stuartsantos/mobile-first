@@ -133,18 +133,6 @@ if ($.browser.msie) {
     }
 };
 $(function(){
-$('#getQuote').appendTo('#segmentBanner');
-$('#topLinks ul li a').eq(2).css('border','none');
-//$('#topLinks ul li a').eq(5).css('border','none');
-$('#siteSearch .btn').val('');
-$('.bottomModule.detailAccModule').eq(3).css('margin-right','0px');
-$('.catNav li').mouseover(function(){
-		$(this).addClass('hover');
-	});
-$('.catNav li').mouseout(function(){
-		$(this).removeClass('hover');
-	});
-$('#subNav3 #li21').removeClass('tabOnActive');
 $('#breadCrumb').append('<span class="brSep">/</span><span class="bcModule"><a href="'+$('#subNav3 li.tabOnActive a').attr('href')+'">'+$('#subNav3 li.tabOnActive a').text()+'</a></span>');
 	var reqText = $('#breadCrumb .bcModule:last a:first').text();
 	var req2Text = $('#breadCrumb .bcModule:eq(1) a:first').text();
@@ -155,106 +143,6 @@ $('#breadCrumb').append('<span class="brSep">/</span><span class="bcModule"><a h
 	else if(trimText(reqText) == 'Home Insurance' || trimText(req2Text) == 'Home Insurance'){
 		$('body').attr('id','HomeInsurance');
 	}
-
-$('a[href=Next]').remove();
-$('.detModDesc').addClass('hide').eq(0).show();
-$('.detailAccModule .detModTitle').eq(0).addClass('activeMe');
-	$('.detModSubTitle,.detModTitle').click(function(){		
-		$('.detModDesc').slideUp('slow');
-		$('.detModTitle').removeClass('activeMe');
-		$(this).addClass('activeMe');
-		var $detModDoesc = $(this).closest('.detModule').find('.detModDesc');
-		if($detModDoesc.is(":hidden")){
-						//$detModDoesc.slideDown('slow');
-						$("#gridCenter").css('height','auto');	
-						$("#gridRight").css('margin-bottom','-43px');
-		}else{
-						$detModDoesc.slideUp('slow');
-						$(this).removeClass('activeMe');
-		}
-	});
-
-
-	$('#gridBottom, #gridCenter ').appendTo('#grid_wrapper');
-	if($('#gridRight').length){
-		$('#gridRight').addClass('gridRightTop') ;
-	}
-	//$('#topLinks ul li:last-child').prev('li').andSelf().addClass("utiNav");
-	//$('#topLinks').append('<ul class="utiNavSec"><div id="utiNavId"></div></ul>');
-	$('#utiNavId').wrapAll('.utiNav');
-	//$('#topLinks ul li.utiNav:not(#topLinks .utiNavSec li.utiNav)').remove();
-	$('#mastHead').append('<ul id="topLink1"></ul><ul id="topLink2"></ul>');
-//	$('#topLinks ul li').slice(0,3).appendTo('#topLink1');
-//	$('#topLinks ul li').slice(0,4).appendTo('#topLink2');
-	//$('#topLinks ul li').eq(0).css('background','none');
-	//$('#topLinks ul li').eq(3).css('background','none');
-	$('a').each(function () {
-	try{
-        var point = $(this).attr('href').lastIndexOf('.');
-        var fileType = $(this).attr('href').substr(point);
-        if (fileType == '.doc' || fileType == '.pdf' || fileType == '.xls' || fileType == '.ppt' || fileType == '.ppt' || fileType == '.swf' || fileType == '.vid' || fileType == '.calc') {
-            $(this).attr('target', '_blank')
-        }
-	}catch(e){
-		console.log('File type '+e)
-	}	
-    });
-	/**/	
-	/* $('#subNav3 ul li').hover(function(){
-		if($('ul#navListPanel #li2').hasClass('tabOnActive')) { }
-		else { $('ul#navListPanel #li2').addClass('tabOnActive'); }
-	} */
-	$('#subNav3 ul li').hover(function(){
-		if($('ul#navListPanel #li3').hasClass('tabOnActive')) {
-		$('ul#navListPanel #li3').addClass('tabOnActive');
-		}
-		else {  }
-	}
-	,
-	function() { 
-		$('ul#navListPanel #li2').removeClass('tabOnActive');
-	});
-	
-	/* common table look and feel*/	
-	$("#gridCenter table.Custom_Bold tr:even").addClass("row_odd");
-	 $("#gridCenter table tr .Custom_Bold").closest("tr").addClass("sub_head");
-//	var tr_odd = 0;
-//	$("#gridCenter table tr").each(function(e){
-//					if($(this).hasClass("sub_head")){
-//									tr_odd = 0;                          
-//					}else if(!tr_odd){
-//									tr_odd = 1;                          
-//					}else if(tr_odd){
-//									tr_odd = 0;
-//									$(this).addClass("row_odd");
-//					}
-//	}); 	
-	if(!$('body.hasBanner').length) {
-		equalHeight($("#gridCenter,#gridRight"));		
-	}
-	if(!$('#gridRight').length) {
-		$('#grid_wrapper').css('background','none');
-	}
-	$('.catNav li a').each(function(){
-		$(this).attr('title', $(this).text());
-		$(this).parent('li').attr('title', '');
-	});
-	
-	/* Need Assistance scroll function  */
-	if(!$('body.hasBanner').length) {
-		var msie6 = $.browser == 'msie' && $.browser.version < 7;
-		if (!msie6) {
-			if($('#assistanceForm').length){
-				var top = $('#assistanceForm').offset().top - parseFloat($('#assistanceForm').css('margin-top').replace(/auto/, 0));
-				$(window).scroll(function (event) {
-					var y = $(this).scrollTop();
-					if (y >= top - 0) { $('#assistanceForm').addClass('fixed'); } 
-					else {  $('#assistanceForm').removeClass('fixed');  }
-				});
-			}
-		}
-	}
-	/* Need Assistance scroll function END  */	
 });
 
 /**COMPAIGN CODE**/ 
@@ -607,32 +495,6 @@ function createScript(linkvar){
 }
 // End QuickQuote Javascript
 
-function equalHeight(group) {
-      var obj = $.browser.msie;
-      var objv = $.browser;
-	  
-      if(obj && objv.version < 7){
-		group.each(function() {
-			$(this).addClass('IE');
-		});			  
-	  }
-	  else{
-		group.each(function() {
-			//$(this).addClass('nonIE');
-		});	
-	  };
-	var tallest = 0;
-	group.each(function() {
-		var thisHeight = $(this).height();
-		if(thisHeight > tallest) {
-			tallest = thisHeight;
-		}
-	});
-	//group.height(tallest);	
-	group.each(function() {
-		//$(this).css('height',tallest);
-	});	
-}
 /*call me */
 
 function isSelectedCallMe(objTextInput, strID) {

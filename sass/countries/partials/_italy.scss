@@ -1,0 +1,48 @@
+/***************Italy******************/
+
+.hasBanner {
+	.bnrDesc {
+		font-size: 1em;
+    @include breakpoint(425px, $no-query: true) {
+      font-size: 1.1em;
+    }
+    @include breakpoint($super-tablet, $no-query: true) {
+      margin: 0;
+      width: 350px;
+      height: 442px;
+      background: #fff;
+      font-size: 1.25em;
+      border: 1px solid $aig-blue;
+      padding-top: 2em;
+    }
+    @include breakpoint($desktop, $no-query: true) {
+      max-height: none;
+    }
+	}
+  #navBanner {
+    @include breakpoint($super-tablet, $no-query: true) {
+      width: 100%;
+    }
+  }
+  .bannerSection img {
+    @include breakpoint($super-tablet, $no-query: true) {
+      float: right;
+    }
+  }
+}
+
+#rightTopMenu {
+  text-align: center;
+  font-family: $futura-med;
+  text-transform: uppercase;
+  font-size: .75em;
+  @include breakpoint($tablet, $no-query: true) {
+    text-align: left;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    width: 260px;
+  }
+}
+
+/***************End Italy******************/

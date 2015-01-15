@@ -57,6 +57,10 @@ strong {
 em strong {
   font-family: $futura-italic-bold;
 }
+sup {
+  font-size:.5em;
+  vertical-align:top;
+}
 .clear:after {
   content: "";
   display: block;
@@ -426,7 +430,7 @@ select, optgroup, option, input, textarea {
   .carModuleTitle {
     display: none;
   }
-  .carModule {
+  .carModule, .carModule1 {
     li:first-child {
       font-family: $futura-med;
     }
@@ -440,8 +444,11 @@ select, optgroup, option, input, textarea {
         max-width: 100%;
       }
     }
-  } 
-  li {
+  }
+  .carModule1 li:first-child {
+    font-family: $futura-reg;
+  }
+  >li {
     margin: 0 1em 1em 0;
     display: block;
     @include breakpoint($tablet, $no-query: true) {
