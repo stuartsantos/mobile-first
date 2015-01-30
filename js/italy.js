@@ -1,4 +1,4 @@
-/***************** Travel Guard Italy Retargeting ************************
+/****************** Travel Guard Italy Retargeting ************************
 
 Start of DoubleClick Floodlight Tag: Please do not remove
 Activity name of this tag: TravelGuard.it homepage

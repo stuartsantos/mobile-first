@@ -1492,7 +1492,7 @@ $(function() {
          "value"   : ""
       }).appendTo(".catNav select");
 
-      $(".catNav li.active span").clone().appendTo("option[selected]");
+      $(".catNav li.active span").clone().appendTo(".catNav option[selected]");
       
       // Populate dropdown with menu items
       $(".catNav li a").each(function() {

@@ -49,6 +49,6 @@ module.exports = function(grunt) {
 
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify', 'compass', 'qunit']);
+  grunt.registerTask('default', ['watch']);
 
 };

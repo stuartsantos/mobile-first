@@ -147,7 +147,15 @@
   .active {
     .detModTitle {
     color: #fff;
-    background: #50c8e8 url('/Chartis/internet/US/en/pier_acc_down_tcm3171-555196.gif') no-repeat 96.5% 20px;
+    background: #50c8e8;
+    position: relative;
+    &:after {
+      content: '_';
+      position: absolute;
+      right: 3.25%;
+      top: -.45em;
+      font-size: 2em;
+    }
     }
     .detModDesc ul, .detModDesc ol {
       list-style: disc outside none;
@@ -174,7 +182,15 @@
     padding: 10px;
   }
   .deActive .detModTitle {
-    background: #e5e5e5 url('/Chartis/internet/US/en/pier_acc_up_tcm3171-555195.gif') no-repeat 96.5% 20px;
+    background: #e5e5e5;
+    position: relative;
+    &:after {
+      content: '+';
+      position: absolute;
+      right: 3%;
+      font-size: 2em;
+      top: 0;
+    }
   }
 }
 
