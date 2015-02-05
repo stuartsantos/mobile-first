@@ -10,12 +10,12 @@ module.exports = function(grunt) {
         // don't need to update the Gruntfile when files are added or removed.
         files: [
           {
-            expand: true,     // Enable dynamic expansion.
+            expand: true,   // Enable dynamic expansion.
             cwd: 'js',      // Src matches are relative to this path.
-            src: ['*.js'], // Actual pattern(s) to match.
-            dest: 'js/min',   // Destination path prefix.
-            ext: '.min.js',   // Dest filepaths will have this extension.
-            extDot: 'first'   // Extensions in filenames begin after the first dot
+            src: ['*.js'],  // Actual pattern(s) to match.
+            dest: 'js/min', // Destination path prefix.
+            ext: '.min.js', // Dest filepaths will have this extension.
+            extDot: 'first' // Extensions in filenames begin after the first dot
           },
         ],
       },
