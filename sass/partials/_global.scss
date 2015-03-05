@@ -14,6 +14,10 @@ body {
   -webkit-text-size-adjust: 100%;
   color: #645c5c;
   background: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
 }
 .centerModule h1, .centerModule h2, .centerModule h3, .centerModule h4, .centerModule h5, .centerModule h6, .newsSectionDtls h3 {
   padding: 5px 0;
