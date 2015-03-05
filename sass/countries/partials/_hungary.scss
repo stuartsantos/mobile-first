@@ -8,6 +8,10 @@ header {
   max-width: 175px;
 }
 
+#formWrapper ul li {
+  max-height: 150px !important;
+}
+
 .hasBanner {
 	.centerModule, .leftModule, .rightModule, .nonBulleted {
     height: auto !important;
